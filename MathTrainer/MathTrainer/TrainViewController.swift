@@ -18,6 +18,7 @@ final class TrainViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet var buttonsCollectionTwo: [UIButton]!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var counter: UILabel!
     
     // MARK: - IBActions
     
@@ -123,6 +124,7 @@ final class TrainViewController: UIViewController {
             
             if isRightAnswer {
                 count += 1
+                counter.text = String(count)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     [weak self] in
                     self?.configureQuestion()
