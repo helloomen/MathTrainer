@@ -285,6 +285,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1aN-iF-xgW"/>
+                                    <action selector="leftAction:" destination="JBV-Zr-dxe" eventType="touchUpInside" id="WSs-Ad-Gfg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-mU-Zi5">
@@ -306,6 +307,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sba-YS-lfm"/>
+                                    <action selector="rightAction:" destination="JBV-Zr-dxe" eventType="touchUpInside" id="OIF-pq-YmS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -324,6 +326,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iCD-we-TC8"/>
                     <connections>
+                        <outlet property="questionLabel" destination="726-eX-9Xp" id="fyV-CV-yt7"/>
                         <outletCollection property="buttonsCollectionTwo" destination="Usg-ut-0x2" collectionClass="NSMutableArray" id="gM2-Qk-v9M"/>
                         <outletCollection property="buttonsCollectionTwo" destination="Hky-mU-Zi5" collectionClass="NSMutableArray" id="GZn-0J-o0B"/>
                     </connections>
