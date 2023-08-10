@@ -117,19 +117,19 @@ final class TrainViewController: UIViewController {
         }
     }
     
-        private func check(answer: String, for button: UIButton) {
-            let isRightAnswer = Int(answer) == self.answer
-            
-            button.backgroundColor = isRightAnswer ? .green : .red
-            
-            if isRightAnswer {
-                count += 1
-                counter.text = String(count)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    [weak self] in
-                    self?.configureQuestion()
-                    self?.configureButtonsTwo()
-                }
+    private func check(answer: String, for button: UIButton) {
+        let isRightAnswer = Int(answer) == self.answer
+        
+        button.backgroundColor = isRightAnswer ? .green : .red
+        
+        if isRightAnswer {
+            count += 1
+            counter.text = String(count)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                [weak self] in
+                self?.configureQuestion()
+                self?.configureButtonsTwo()
             }
         }
     }
+}
