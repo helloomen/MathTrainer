@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35 + 27 =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="726-eX-9Xp">
-                                <rect key="frame" x="104" y="337.66666666666669" width="185" height="48"/>
+                                <rect key="frame" x="104.33333333333331" y="337.66666666666669" width="185" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -285,6 +285,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1aN-iF-xgW"/>
+                                    <action selector="leftAction:" destination="JBV-Zr-dxe" eventType="touchUpInside" id="WSs-Ad-Gfg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-mU-Zi5">
@@ -306,24 +307,40 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sba-YS-lfm"/>
+                                    <action selector="rightAction:" destination="JBV-Zr-dxe" eventType="touchUpInside" id="OIF-pq-YmS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="4M9-pE-Ygv">
+                                <rect key="frame" x="129.33333333333334" y="230" width="135.00000000000003" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ogb-I4-eVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DhD-TP-e3n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Usg-ut-0x2" firstAttribute="centerX" secondItem="xYf-AH-MV7" secondAttribute="centerX" constant="-60" id="4DF-r4-Qhc"/>
                             <constraint firstItem="fYh-1d-a8q" firstAttribute="top" secondItem="DhD-TP-e3n" secondAttribute="top" constant="50" id="7QC-Sz-1Ve"/>
+                            <constraint firstItem="DhD-TP-e3n" firstAttribute="trailing" secondItem="4M9-pE-Ygv" secondAttribute="trailing" constant="129.33000000000001" id="FRR-TE-lI9"/>
                             <constraint firstItem="726-eX-9Xp" firstAttribute="centerX" secondItem="xYf-AH-MV7" secondAttribute="centerX" id="QFr-ap-ZUZ"/>
                             <constraint firstItem="fYh-1d-a8q" firstAttribute="leading" secondItem="DhD-TP-e3n" secondAttribute="leading" constant="50" id="Un5-Fg-pIH"/>
                             <constraint firstItem="Hky-mU-Zi5" firstAttribute="centerY" secondItem="Usg-ut-0x2" secondAttribute="centerY" id="Wh3-Rn-4F1"/>
+                            <constraint firstItem="4M9-pE-Ygv" firstAttribute="leading" secondItem="DhD-TP-e3n" secondAttribute="leading" constant="129.33000000000001" id="Z9l-Cc-Ped"/>
                             <constraint firstItem="726-eX-9Xp" firstAttribute="centerY" secondItem="xYf-AH-MV7" secondAttribute="centerY" constant="-30" id="gaC-6M-Tjg"/>
+                            <constraint firstItem="4M9-pE-Ygv" firstAttribute="centerY" secondItem="xYf-AH-MV7" secondAttribute="centerY" constant="-146" id="nkT-24-PIl"/>
+                            <constraint firstItem="4M9-pE-Ygv" firstAttribute="centerX" secondItem="xYf-AH-MV7" secondAttribute="centerX" id="tat-9l-9NU"/>
                             <constraint firstItem="Usg-ut-0x2" firstAttribute="top" secondItem="726-eX-9Xp" secondAttribute="bottom" constant="120" id="vRw-kS-KzF"/>
                             <constraint firstItem="Hky-mU-Zi5" firstAttribute="centerX" secondItem="xYf-AH-MV7" secondAttribute="centerX" constant="60" id="xgy-F4-oFZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iCD-we-TC8"/>
                     <connections>
+                        <outlet property="Counter" destination="4M9-pE-Ygv" id="bB4-wh-fSJ"/>
+                        <outlet property="questionLabel" destination="726-eX-9Xp" id="fyV-CV-yt7"/>
                         <outletCollection property="buttonsCollectionTwo" destination="Usg-ut-0x2" collectionClass="NSMutableArray" id="gM2-Qk-v9M"/>
                         <outletCollection property="buttonsCollectionTwo" destination="Hky-mU-Zi5" collectionClass="NSMutableArray" id="GZn-0J-o0B"/>
                     </connections>
@@ -331,12 +348,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnz-6b-S7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="QAw-aL-l2J" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="976" y="4"/>
+            <point key="canvasLocation" x="974.80916030534343" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
